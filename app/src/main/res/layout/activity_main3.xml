@@ -13,7 +13,7 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:background="@{viewmodels.background}"
-       tools:context=".MainActivity">
+       tools:context=".Main3Activity">
 
       <LinearLayout
           android:layout_width="match_parent"

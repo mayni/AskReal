@@ -20,6 +20,7 @@ public class Main3Activity extends AppCompatActivity {
 
     private int num = 0,num2=0;
     private MainViewModel2 viewModel;
+
     ActivityMainBindingImpl binding;
 
     private String fname,contact,who;
