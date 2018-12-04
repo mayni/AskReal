@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AskReal</string>
+    <string name="nameSmile">SUPITCHA\nSAWASDIWARAPA</string>
+    <string name="nameBeam">NATNICHA SOMSAK</string>
+    <string name="telMailSmile">(+66)81-899-4821\nspch.smmile@gmail.com</string>
+    <string name="btnClick">SWAP</string>
+    <string name="beamPhone">\t\t\tPhone: 080-1290104\nE-mail:bns-04@hotmail.com</string>
 </resources>

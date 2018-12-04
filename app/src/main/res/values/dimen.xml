@@ -6,4 +6,27 @@
     <dimen name="layout50dp">50dp</dimen>
     <dimen name="layout60dp">60dp</dimen>
     <dimen name="layout10dp">10dp</dimen>
+
+    <dimen name="cornerCard">15dp</dimen>
+    <dimen name="cornerButton">5dp</dimen>
+    <dimen name="widthCard">340dp</dimen>
+    <dimen name="heightCard">200dp</dimen>
+    <dimen name="btnMarginBtn">5dp</dimen>
+    <dimen name="SizeTextBtn">18sp</dimen>
+    <dimen name="paddingCard">20dp</dimen>
+    <dimen name="paddingCardSmile">25dp</dimen>
+    <dimen name="paddingPartNameSmile">20dp</dimen>
+    <dimen name="marginPartNameSmile">20dp</dimen>
+    <dimen name="sizeTextNameSmile">20dp</dimen>
+    <dimen name="marginPartContactSmile">15dp</dimen>
+    <dimen name="sizeTextPartContactSmile">15sp</dimen>
+    <dimen name="marginCardSmile">10dp</dimen>
+    <dimen name="marginCardBeam">12dp</dimen>
+    <dimen name="NameH">75dp</dimen>
+    <dimen name="paddingNameBeam">15dp</dimen>
+    <dimen name="TextSizeNameBeam">25sp</dimen>
+    <dimen name="PhoneH">49dp</dimen>
+    <dimen name="marginBottomPhone">28dp</dimen>
+    <dimen name="textSizePhone">15sp</dimen>
+
 </resources>
