@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.mayni.askreal.databinding.ActivityMainBindingImpl;
+import com.example.mayni.askreal.databinding.ActivityMain3BindingImpl;
 
 
 public class Main3Activity extends AppCompatActivity {
@@ -21,7 +21,7 @@ public class Main3Activity extends AppCompatActivity {
     private int num = 0,num2=0;
     private MainViewModel2 viewModel;
 
-    ActivityMainBindingImpl binding;
+    ActivityMain3BindingImpl binding;
 
     private String fname,contact,who;
     private Drawable background,bgBtn,bgCard;
@@ -40,7 +40,7 @@ public class Main3Activity extends AppCompatActivity {
     private void bindView(){
         viewModel = new MainViewModel2();
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main3);
-        binding.setViewmodel(viewModel);
+        binding.setViewmodels(viewModel);
 
         settingCard(who);
         dataBinding(who);
@@ -98,6 +98,7 @@ public class Main3Activity extends AppCompatActivity {
             viewModel.setFullName(who == "smile" ? "SMILE :D" : "I'm BEAMMHEE. :)");
         }
         if (who == "smile"){
+
             binding.nameMe.setText(viewModel.getFullName());
         }else {
             binding.nameBeam.setText(viewModel.getFullName());
@@ -130,7 +131,9 @@ public class Main3Activity extends AppCompatActivity {
     private void dataBinding(String who){
         viewModel.setText(fname,contact);
         viewModel.setDrawable(background,bgBtn,bgCard);
+
         binding.btnClick.setBackground(viewModel.getBgBtn());
+
         binding.layoutBg.setBackground(viewModel.getBackground());
         binding.card.setBackground(viewModel.getBgCard());
 

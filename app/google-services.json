@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1067106979603",
+    "firebase_url": "https://askreal-43ceb.firebaseio.com",
+    "project_id": "askreal-43ceb",
+    "storage_bucket": "askreal-43ceb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067106979603:android:861c8d1a993915bc",
+        "android_client_info": {
+          "package_name": "com.example.mayni.askreal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067106979603-sgttc7lh455vo17gmhevmnmnok1dmr5i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mayni.askreal",
+            "certificate_hash": "e5086dff6bcd4c2c0f61f1de32abaa0cd0d51d2f"
+          }
+        },
+        {
+          "client_id": "1067106979603-r3oi9b2qgvgh5mhujq6pa0kmav7fge23.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ3ldwMc3batgc5csOXmL7C7U5O3gYZe4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067106979603-r3oi9b2qgvgh5mhujq6pa0kmav7fge23.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
