@@ -9,6 +9,14 @@
 
     </style>
 
+    <style name="title">
+        <item name= "android:textStyle">bold</item>
+        <item name= "android:fontFamily">@font/moon2_regular</item>
+        <item name= "android:textSize">@dimen/layout20dp</item>
+        <item name= "android:textColor">@color/colorDarkerBrown</item>
+    </style>
+
+
     <style name="btn">
         <item name="android:fontFamily">@font/moon2_regular</item>
         <item name="android:textStyle">bold</item>
