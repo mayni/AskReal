@@ -9,4 +9,56 @@
 
     </style>
 
+    <style name="btn">
+        <item name="android:fontFamily">@font/moon2_regular</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/btnClick</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/btnMarginBtn</item>
+        <item name="android:textSize">@dimen/SizeTextBtn</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="partNameSmile">
+        <item name="android:background">@drawable/card_purple</item>
+        <item name="android:padding">@dimen/paddingPartNameSmile</item>
+        <item name="android:layout_marginTop">@dimen/marginPartNameSmile</item>
+        <item name="android:layout_marginStart">@dimen/marginPartNameSmile</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:text">@string/nameSmile</item>
+        <item name="android:textSize">@dimen/sizeTextNameSmile</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/moon2_regular</item>
+    </style>
+
+    <style name="partContactSmile">
+        <item name="android:layout_margin">@dimen/marginPartContactSmile</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:fontFamily">@font/moon2_regular</item>
+        <item name="android:textColor">@color/colorDarkPurple</item>
+        <item name="android:textSize">@dimen/sizeTextPartContactSmile</item>
+    </style>
+
+    <style name="partNameBeam">
+        <item name="android:padding">@dimen/paddingNameBeam</item>
+        <item name="android:text">@string/nameBeam</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/moon2_regular</item>
+        <item name="android:textSize">@dimen/TextSizeNameBeam</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="partContactBeam">
+        <item name=" android:layout_marginBottom">@dimen/marginBottomPhone</item>
+        <item name=" android:text">@string/beamPhone</item>
+        <item name="android:textSize">@dimen/textSizePhone</item>
+        <item name="android:fontFamily">@font/moon2_regular</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+
 </resources>

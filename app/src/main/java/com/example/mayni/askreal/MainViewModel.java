@@ -1,6 +1,7 @@
 package com.example.mayni.askreal;
 
 import android.arch.lifecycle.ViewModel;
+import android.graphics.drawable.Drawable;
 
 public class MainViewModel extends ViewModel{
     private String name;
@@ -10,6 +11,7 @@ public class MainViewModel extends ViewModel{
     private String tel;
     private String tel_name;
     private Boolean button_EN,button_TH;
+
 
     public MainViewModel() {
 
@@ -21,6 +23,8 @@ public class MainViewModel extends ViewModel{
         this.tel_name= "เบอร์โทรติดต่อ :";
         this.button_EN=true;
         this.button_TH=false;
+
+
     }
     public void setString(String string[]) {
         this.name = string[0];
@@ -32,7 +36,6 @@ public class MainViewModel extends ViewModel{
 
 
     }
-
 
     public String getId() {
         return id;
@@ -72,4 +75,6 @@ public class MainViewModel extends ViewModel{
     public void setButton_TH(Boolean button_TH) {
         this.button_TH = button_TH;
     }
+
+
 }
