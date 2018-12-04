@@ -8,10 +8,16 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.Dimension;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.mayni.askreal.databinding.ActivityMain3BindingImpl;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class Main3Activity extends AppCompatActivity {
@@ -19,14 +25,15 @@ public class Main3Activity extends AppCompatActivity {
     private View.OnClickListener onClickListener;
 
     private int num = 0,num2=0;
-    private MainViewModel2 viewModel;
+    private MainViewModel2 viewModel, viewModel_1,viewModel_2;
 
     ActivityMain3BindingImpl binding;
 
     private String fname,contact,who;
     private Drawable background,bgBtn,bgCard;
 
-
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,16 +45,32 @@ public class Main3Activity extends AppCompatActivity {
     }
 
     private void bindView(){
-        viewModel = new MainViewModel2();
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main3);
-        binding.setViewmodels(viewModel);
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference().child("user");
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                viewModel_1 = new MainViewModel2(dataSnapshot.child("smile").getChildren(),getResources().getDrawable(R.drawable.bg2)
+                        ,getDrawable(R.drawable.button1),getDrawable(R.drawable.card));
+
+                viewModel_2 = new MainViewModel2(dataSnapshot.child("beam").getChildren(),getResources().getDrawable(R.drawable.bg3)
+                        ,getDrawable(R.drawable.button2),getDrawable(R.drawable.bg7));
+
+                viewModel = viewModel_1;
+                binding.setViewmodels(viewModel);
+            }
+            @Override
+            public void onCancelled(DatabaseError error) {
+                System.out.println(error.toException());
+
+            }
+        });
 
         settingCard(who);
         dataBinding(who);
-
-
-
-
 
     }
 
@@ -64,10 +87,15 @@ public class Main3Activity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.btnClick :
+
                         if (who  == "smile"){
                             who = "beam";
+                            viewModel = viewModel_2;
+                            binding.setViewmodels(viewModel);
                         }else {
                             who = "smile";
+                            viewModel = viewModel_1;
+                            binding.setViewmodels(viewModel);
                         }
                         settingCard(who);
                         dataBinding(who);
@@ -99,9 +127,9 @@ public class Main3Activity extends AppCompatActivity {
         }
         if (who == "smile"){
 
-            binding.nameMe.setText(viewModel.getFullName());
+            binding.nameMe.setText(viewModel_1.getFullName());
         }else {
-            binding.nameBeam.setText(viewModel.getFullName());
+            binding.nameBeam.setText(viewModel_2.getFullName());
         }
 
 
@@ -111,46 +139,34 @@ public class Main3Activity extends AppCompatActivity {
     private void settingCard(String who){
         switch (who){
             case "smile":
-                fname = getString(R.string.nameSmile);
-                contact = getString(R.string.telMailSmile);
+//                fname = getString(R.string.nameSmile);
+//                contact = getString(R.string.telMailSmile);
                 background = getResources().getDrawable(R.drawable.bg2);
                 bgBtn = getDrawable(R.drawable.button1);
                 bgCard = getDrawable(R.drawable.card);
                 break;
             case "beam":
-                fname = getString(R.string.nameBeam);
-                contact = getString(R.string.beamPhone);
+//                fname = getString(R.string.nameBeam);
+//                contact = getString(R.string.beamPhone);
                 background = getResources().getDrawable(R.drawable.bg3);
                 bgBtn = getDrawable(R.drawable.button2);
                 bgCard = getDrawable(R.drawable.bg7);
         }
-
-
     }
 
     private void dataBinding(String who){
-        viewModel.setText(fname,contact);
-        viewModel.setDrawable(background,bgBtn,bgCard);
 
-        binding.btnClick.setBackground(viewModel.getBgBtn());
-
-        binding.layoutBg.setBackground(viewModel.getBackground());
-        binding.card.setBackground(viewModel.getBgCard());
 
         if (who == "smile"){
             binding.nameMe.setVisibility(View.VISIBLE);
             binding.nameBeam.setVisibility(View.INVISIBLE);
             binding.contactSmile.setVisibility(View.VISIBLE);
             binding.contactBeam.setVisibility(View.INVISIBLE);
-            binding.nameMe.setText(viewModel.getFullName());
-            binding.contactSmile.setText(viewModel.getContact());
         }else {
             binding.nameMe.setVisibility(View.INVISIBLE);
             binding.nameBeam.setVisibility(View.VISIBLE);
             binding.contactSmile.setVisibility(View.INVISIBLE);
             binding.contactBeam.setVisibility(View.VISIBLE);
-            binding.nameBeam.setText(viewModel.getFullName());
-            binding.contactBeam.setText(viewModel.getContact());
         }
 
 
