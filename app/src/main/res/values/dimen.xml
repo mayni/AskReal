@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font25sp">25sp</dimen>
+    <dimen name="font15sp">15sp</dimen>
+    <dimen name="layout20dp">20dp</dimen>
+    <dimen name="layout50dp">50dp</dimen>
+    <dimen name="layout60dp">60dp</dimen>
+    <dimen name="layout10dp">10dp</dimen>
+</resources>

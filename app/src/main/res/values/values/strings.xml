@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Android Name Card</string>
+    <string name="name_th">คุณนิวัฒน์  สารภี</string>
+    <string name="id_th">หมายเลขบัตรประชาชน :</string>
+    <string name="id">1-2345-678910-88-8</string>
+    <string name="tel_th">เบอร์โทรติดต่อ :</string>
+    <string name="tel">+66 81 2265894</string>
+    <string name="addr_th">จังหวัดเชียงใหม่ ประเทศไทย 50200</string>
+    <string name="name_en">MR. Niwat Sarapee</string>
+    <string name="id_en">Identity Number Card :</string>
+    <string name="tel_en">Telephone :</string>
+    <string name="addr_en">ChiangMai Thailand 50200</string>
+</resources>
