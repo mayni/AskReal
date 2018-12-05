@@ -91,7 +91,7 @@
                         android:fontFamily="@font/fc_active_regular"
                         android:text="@{viewmodel.name}"
                         android:textColor="@color/colorCode"
-                        android:textSize="@dimen/font25sp"
+                        android:textSize="@dimen/font40sp"
                         android:textStyle="bold" />
 
                     <RelativeLayout
@@ -108,7 +108,7 @@
                             android:textColor="@color/colorCode"
                             android:text="@{viewmodel.id_name}"
 
-                            android:textSize="@dimen/font15sp"
+                            android:textSize="@dimen/font20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -120,7 +120,7 @@
                             android:fontFamily="@font/fc_active_regular"
                             android:text="@{viewmodel.id}"
                             android:textColor="@color/colorCode"
-                            android:textSize="@dimen/font15sp"
+                            android:textSize="@dimen/font20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -133,7 +133,7 @@
                             android:fontFamily="@font/fc_active_regular"
                             android:text="@{viewmodel.tel_name}"
                             android:textColor="@color/colorCode"
-                            android:textSize="@dimen/font15sp"
+                            android:textSize="@dimen/font20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -146,7 +146,7 @@
                             android:fontFamily="@font/fc_active_regular"
                             android:text="@{viewmodel.tel}"
                             android:textColor="@color/colorCode"
-                            android:textSize="@dimen/font15sp"
+                            android:textSize="@dimen/font20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -158,7 +158,7 @@
                             android:fontFamily="@font/fc_active_regular"
                             android:text="@{viewmodel.address}"
                             android:textColor="@color/colorCode"
-                            android:textSize="@dimen/font15sp"
+                            android:textSize="@dimen/font20sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
 

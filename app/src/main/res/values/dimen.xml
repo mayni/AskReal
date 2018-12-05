@@ -3,6 +3,9 @@
     <dimen name="font25sp">25sp</dimen>
     <dimen name="font15sp">15sp</dimen>
     <dimen name="layout20dp">20dp</dimen>
+    <dimen name="font30sp">30sp</dimen>
+    <dimen name="font40sp">40sp</dimen>
+    <dimen name="font20sp">20sp</dimen>
     <dimen name="layout50dp">50dp</dimen>
     <dimen name="layout60dp">60dp</dimen>
     <dimen name="layout10dp">10dp</dimen>
