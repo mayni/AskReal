@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
-
+    private Button btn_back;
     ActivityMainBindingImpl binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        btn_back = (Button) findViewById(R.id.btn_back);
         initView();
 
     }
@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
             ChangeData("TH");
             viewModel.setButton_EN(true);
             viewModel.setButton_TH(false);
+        }else if (view.getId() == R.id.btn_back){
+            Intent i = new Intent(getApplicationContext(),Main2Activity.class);
+            startActivity(i);
         }
         binding.btnEn.setClickable(viewModel.getButton_EN());
         binding.btnEn.setEnabled(viewModel.getButton_EN());
@@ -118,4 +121,5 @@ public class MainActivity extends AppCompatActivity {
         view.startAnimation(anim);
         System.out.println("[Click]"+ view.getId());
     }
+
 }

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.mayni.askreal.databinding.ActivityMain3BindingImpl;
@@ -78,6 +79,7 @@ public class Main3Activity extends AppCompatActivity {
         initOnClickListener();
         binding.btnClick.setOnClickListener(onClickListener);
         binding.cardView.setOnClickListener(onClickListener);
+        binding.btnBack.setOnClickListener(onClickListener);
     }
 
     // You don't have to bind any functions to "android:onClick" in layout XML file.
@@ -86,6 +88,11 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
+                    case R.id.btnBack :
+                        Intent i = new Intent(getApplicationContext(),Main2Activity.class);
+                        startActivity(i);
+                        break;
+
                     case R.id.btnClick :
 
                         if (who  == "smile"){
@@ -171,7 +178,5 @@ public class Main3Activity extends AppCompatActivity {
 
 
     }
-
-
 
 }
