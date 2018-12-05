@@ -105,6 +105,8 @@
                             android:layout_marginTop="@dimen/layout20dp"
                             android:layout_marginRight="@dimen/layout10dp"
                             android:fontFamily="@font/fc_active_regular"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorCode"
                             android:text="@{viewmodel.id_name}"
                             android:textColor="@color/colorCode"
 
