@@ -5,36 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main2Activity"
-    android:background="@drawable/bg14">
+    >
 
     <Button
         android:id="@+id/btn_mark"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="268dp"
-        android:layout_marginStart="40dp"
-        android:text="go to\nN' Mark"
-        android:background="@color/colorLightGreen"
         style="@style/btn"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="144dp"
+        android:background="@color/colorLightGreen"
+        android:onClick="onClick"
+        android:text="go to\nN' Mark"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_samhee"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="268dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="8dp"
-        android:text="go to\nP' SaMhee"
         style="@style/btn"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/colorOrangePink"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="onClick"
+        android:text="go to\nP' SaMhee"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn_mark"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
 
 
     <TextView
@@ -42,26 +45,28 @@
         style="@style/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="204dp"
         android:fontFamily="@font/moon2_regular"
         android:text="See to Mark"
         android:textSize="@dimen/layout20dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_mark"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_mark"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView2"
         style="@style/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="136dp"
         android:text="See to SaMhee"
-        app:layout_constraintBottom_toTopOf="@+id/btn_samhee"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
 </android.support.constraint.ConstraintLayout>

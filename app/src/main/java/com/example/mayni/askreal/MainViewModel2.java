@@ -15,6 +15,7 @@ public class MainViewModel2 extends ViewModel {
     private Drawable background;
     private Drawable bgCard;
     private Drawable bgBtn;
+    private String name;
 
 
     public MainViewModel2(Iterable<DataSnapshot> me, Drawable background,Drawable bgBtn,Drawable bgCard){
@@ -28,6 +29,7 @@ public class MainViewModel2 extends ViewModel {
                     email = child.getValue().toString();
                     break;
                 case "name" :
+                    this.name = child.getValue().toString();
                     this.fullName = child.getValue().toString();
                     break;
                 case "nickname" :
@@ -40,9 +42,6 @@ public class MainViewModel2 extends ViewModel {
             Log.i("MyTag",child.getKey()+ child.getValue().toString());
         }
         this.contact = tel + "\n"+ email;
-//        this.background = bg;
-//        this.bgBtn = bgBtn;
-//        this.bgCard = bgCard;
 
 
     }
@@ -83,5 +82,13 @@ public class MainViewModel2 extends ViewModel {
 
     public Drawable getBgBtn() {
         return bgBtn;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public String getName() {
+        return name;
     }
 }

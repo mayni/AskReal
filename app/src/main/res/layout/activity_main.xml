@@ -13,55 +13,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:background="@drawable/background"
+    android:background="@drawable/bg10"
     tools:context=".MainActivity">
 
-        <LinearLayout
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/layout50dp"
-            android:gravity="right"
-            >
+            android:gravity="right">
+
             <Button
                 android:id="@+id/btn_th"
                 android:layout_width="@dimen/layout50dp"
                 android:layout_height="wrap_content"
                 android:clickable="@{viewmodel.button_TH}"
                 android:enabled="@{viewmodel.button_TH}"
+                android:fontFamily="@font/fc_active_regular"
                 android:onClick="process"
                 android:text="TH" />
+
             <Button
                 android:id="@+id/btn_en"
                 android:layout_width="@dimen/layout50dp"
                 android:layout_height="wrap_content"
-                android:onClick="process"
                 android:clickable="@{viewmodel.button_EN}"
                 android:enabled="@{viewmodel.button_EN}"
+                android:fontFamily="@font/fc_active_regular"
+                android:onClick="process"
                 android:text="EN" />
 
         </LinearLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/layout10dp"
                     android:layout_weight="0.4"
-                    android:padding="@dimen/layout20dp"
                     android:onClick="imageClick"
-                    android:src="@mipmap/profile"/>
+                    android:padding="@dimen/layout20dp"
+                    android:src="@mipmap/profile" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.6"
-                    android:src="@mipmap/center"
-                    />
+                    android:src="@mipmap/center" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -73,71 +87,80 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-
-                        android:textStyle="bold"
-                        android:textColor="@color/colorCode"
                         android:layout_marginTop="@dimen/layout60dp"
+                        android:fontFamily="@font/fc_active_regular"
                         android:text="@{viewmodel.name}"
-                        android:textSize="@dimen/font25sp" />
+                        android:textColor="@color/colorCode"
+                        android:textSize="@dimen/font25sp"
+                        android:textStyle="bold" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
+
                         <TextView
                             android:id="@+id/idname"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="@dimen/layout10dp"
                             android:layout_marginTop="@dimen/layout20dp"
-                            android:textStyle="bold"
-
+                            android:layout_marginRight="@dimen/layout10dp"
+                            android:fontFamily="@font/fc_active_regular"
                             android:text="@{viewmodel.id_name}"
-                            android:textSize="@dimen/font15sp" />
+                            android:textColor="@color/colorCode"
+
+                            android:textSize="@dimen/font15sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:id="@+id/tv_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@+id/idname"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorCode"
                             android:layout_marginTop="@dimen/layout20dp"
+                            android:layout_toRightOf="@+id/idname"
+                            android:fontFamily="@font/fc_active_regular"
                             android:text="@{viewmodel.id}"
-                            android:textSize="@dimen/font15sp" />
+                            android:textColor="@color/colorCode"
+                            android:textSize="@dimen/font15sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:id="@+id/tv_tel_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/idname"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorCode"
-                            android:layout_marginRight="@dimen/layout10dp"
                             android:layout_marginTop="@dimen/layout20dp"
+                            android:layout_marginRight="@dimen/layout10dp"
+                            android:fontFamily="@font/fc_active_regular"
                             android:text="@{viewmodel.tel_name}"
-                            android:textSize="@dimen/font15sp" />
+                            android:textColor="@color/colorCode"
+                            android:textSize="@dimen/font15sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv_tel"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/idname"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorCode"
-                            android:layout_toRightOf="@+id/tv_tel_name"
                             android:layout_marginTop="@dimen/layout20dp"
+                            android:layout_toRightOf="@+id/tv_tel_name"
+                            android:fontFamily="@font/fc_active_regular"
                             android:text="@{viewmodel.tel}"
-                            android:textSize="@dimen/font15sp" />
+                            android:textColor="@color/colorCode"
+                            android:textSize="@dimen/font15sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:id="@+id/tv_address"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/tv_tel_name"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorCode"
                             android:layout_marginTop="@dimen/layout20dp"
+                            android:fontFamily="@font/fc_active_regular"
                             android:text="@{viewmodel.address}"
-                            android:textSize="@dimen/font15sp" />
+                            android:textColor="@color/colorCode"
+                            android:textSize="@dimen/font15sp"
+                            android:textStyle="bold" />
                     </RelativeLayout>
-
 
 
                 </LinearLayout>

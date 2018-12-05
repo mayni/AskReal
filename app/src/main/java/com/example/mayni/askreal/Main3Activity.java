@@ -119,11 +119,11 @@ public class Main3Activity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private  void changeName(int val,String who){
         if (val%2 != 0) {
-                    viewModel.setFullName( who == "smile" ? getString(R.string.nameSmile) : getString(R.string.nameBeam));
+                    viewModel.setFullName( who == "smile" ? viewModel_1.getName() : viewModel_2.getName());
         }
         else {
 
-            viewModel.setFullName(who == "smile" ? "SMILE :D" : "I'm BEAMMHEE. :)");
+            viewModel.setFullName(who == "smile" ? viewModel_1.getNickname() : viewModel_2.getNickname());
         }
         if (who == "smile"){
 
